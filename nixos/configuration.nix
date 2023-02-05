@@ -59,8 +59,6 @@
     };
   };
 
-  # FIXME: Add the rest of your current configuration
-
   environment.systemPackages = [
     pkgs.spice-vdagent
     pkgs.nil
@@ -87,20 +85,12 @@
     xkbVariant = "";
   };
 
-
-
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
-  # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
-    # FIXME: Replace with your username
     dmytro = {
-      # TODO: You can set an initial password for your user.
-      # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-      # Be sure to change it (using passwd) after rebooting!
       initialPassword = "correcthorsebatterystaple";
       isNormalUser = true;
       openssh.authorizedKeys.keys = let
@@ -109,7 +99,6 @@
           sha256 = "sha256-MW76pxSnJNL81lp7XJlKgwJK6jiWbTVbUEZazD0SkmM=";
         };
       in pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "networkmanager" "wheel" ];
     };
   };

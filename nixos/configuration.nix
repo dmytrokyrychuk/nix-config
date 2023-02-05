@@ -64,6 +64,8 @@
     pkgs.nil
   ];
 
+  environment.variables.EDITOR = "nvim";
+  
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.utf8";
 

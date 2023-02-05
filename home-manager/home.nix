@@ -46,7 +46,11 @@
   };
 
   # Add stuff for your user as you see fit:
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+  };
   # home.packages = with pkgs; [ steam ];
 
   # Enable home-manager and git
@@ -55,7 +59,6 @@
   programs.git.userName = "Dmytro Kyrychuk";
   programs.git.userEmail = "dmytro@kyrych.uk";
 
-  programs.vim.enable = true;
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;

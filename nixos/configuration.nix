@@ -103,12 +103,12 @@
       # Be sure to change it (using passwd) after rebooting!
       initialPassword = "correcthorsebatterystaple";
       isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILFn/AElBrb+DOO3Mf075fGIfBuhd4UBIs91mJrZP11o"
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBGyeBflbdU9G2eDbXLwl2TPAc4nMdg9icnXJZzY5po9"
-	"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPPrQqC7y213sUAFfYsEK46aQ9hOGREkbG7NSJryP/Wg"
-	"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUZc2SIBWOfg2vpnIxizPATv9NvhQhYrb/NH5XB8ObtfVERXPDHWxjZlRDD9QhqBdLOpOZflV2ql++jOuoILrOoFo/5KN6USyt8WKPBsqm04cbB3cnN/LqCbzjF8hhnAGwxCc9fSJqYYVwqe4iGdKRHQoRGrBtwLKl8fuDhxkB72dVCpD8MEz7eE+X7dhWcktnEO+MA3qVova+SLOH68SbufaBqgtYarhXc+zkiFK3vaRdTOUnKvatFZj1vATy29h+MmDlFJEA+4ZUkXTJw7nVDyuJsWLf1N5csQqm/ijVOTtt1w0ygGYG8vC5IN48fboqYgU+a5yO9ZyfoHYl8LOj1chdIwzuyQMAtV5PGzvaIsaxHhaQ1EdtpaOlFNRsDHFvp9DZ17QA+JObhefO21Nxw6ls4JkgQ3DbpByOypNav238kNTIdQ0Oo2tWD9v1eKrIAyb/oMqlOf25hos/jUG/7mfPqWNeBm59BBoXQd9eT+WGQj7g4Zbgjd0q2jRz/Iaxu4h+Hp9lbzf3hKe4pHLRtKc/mH1cIFehmXl7ShVFJpMG8N9J8oE4Fakn91zbZdE9fA4ncbdSPLALBXc5vP3TqagE9p1hEBykW4r4cAP6mrjh0xLBTMEYV1ewIjD8qC6XR7i8pXL22xMtFr9XkgPU0RlAHp/rrvh6oOrh37o6qw=="
-      ];
+      openssh.authorizedKeys.keys = let
+        authorizedKeys = pkgs.fetchurl {
+          url = "https://github.com/dmytrokyrychuk.keys";
+          sha256 = "sha256-MW76pxSnJNL81lp7XJlKgwJK6jiWbTVbUEZazD0SkmM=";
+        };
+      in pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
       extraGroups = [ "networkmanager" "wheel" ];
     };

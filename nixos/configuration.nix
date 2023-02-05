@@ -62,10 +62,11 @@
   environment.systemPackages = [
     pkgs.spice-vdagent
     pkgs.nil
+    pkgs.nixpkgs-fmt
   ];
 
   environment.variables.EDITOR = "nvim";
-  
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.utf8";
 
@@ -95,12 +96,14 @@
     dmytro = {
       initialPassword = "correcthorsebatterystaple";
       isNormalUser = true;
-      openssh.authorizedKeys.keys = let
-        authorizedKeys = pkgs.fetchurl {
-          url = "https://github.com/dmytrokyrychuk.keys";
-          sha256 = "sha256-MW76pxSnJNL81lp7XJlKgwJK6jiWbTVbUEZazD0SkmM=";
-        };
-      in pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);
+      openssh.authorizedKeys.keys =
+        let
+          authorizedKeys = pkgs.fetchurl {
+            url = "https://github.com/dmytrokyrychuk.keys";
+            sha256 = "sha256-MW76pxSnJNL81lp7XJlKgwJK6jiWbTVbUEZazD0SkmM=";
+          };
+        in
+        pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);
       extraGroups = [ "networkmanager" "wheel" ];
     };
   };

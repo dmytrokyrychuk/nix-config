@@ -63,6 +63,7 @@
 
   environment.systemPackages = [
     pkgs.spice-vdagent
+    pkgs.nil
   ];
 
   # Select internationalisation properties.

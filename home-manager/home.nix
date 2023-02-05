@@ -54,15 +54,20 @@
   programs.git.enable = true;
   programs.git.userName = "Dmytro Kyrychuk";
   programs.git.userEmail = "dmytro@kyrych.uk";
-  
+
   programs.vim.enable = true;
   programs.vscode = {
     enable = true;
+    enableUpdateCheck = false;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       jnoortheen.nix-ide
     ];
+    userSettings = {
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+    };
   };
 
   # Nicely reload system units when changing configs

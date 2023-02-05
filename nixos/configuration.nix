@@ -61,6 +61,10 @@
 
   # FIXME: Add the rest of your current configuration
 
+  environment.systemPackages = [
+    pkgs.spice-vdagent
+  ];
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.utf8";
 

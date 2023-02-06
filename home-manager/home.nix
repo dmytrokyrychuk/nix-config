@@ -62,15 +62,26 @@
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       jnoortheen.nix-ide
+    ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "vscode-icons";
+        publisher = "vscode-icons-team";
+        version = "12.2.0";
+        sha256 = "sha256-PxM+20mkj7DpcdFuExUFN5wldfs7Qmas3CnZpEFeRYs=";
+      }
     ];
     userSettings = {
       nix.enableLanguageServer = true;
       nix.serverPath = "nil";
       nix.serverSettings.nil.formatting.command = [ "nixpkgs-fmt" ];
+
+      workbench = {
+        iconTheme = "vscode-icons";
+      };
     };
   };
 

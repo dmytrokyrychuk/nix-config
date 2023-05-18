@@ -59,6 +59,8 @@
   programs.git.userName = "Dmytro Kyrychuk";
   programs.git.userEmail = "dmytro@kyrych.uk";
 
+  programs.qutebrowser.enable = true;
+
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
@@ -82,6 +84,14 @@
       workbench = {
         iconTheme = "vscode-icons";
       };
+    };
+  };
+
+  xsession.windowManager.i3 = {
+    config = {
+      enable = true;
+      startup = [
+      ];
     };
   };
 

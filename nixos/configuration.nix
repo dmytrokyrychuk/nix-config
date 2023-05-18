@@ -120,12 +120,15 @@
 
   services.xserver = {
     enable = true;
-    desktopManager.xfce.enable = true;
+    desktopManager.xterm.enable = false;
+    displayManager.defaultSession = "none+i3";
+    windowManager.i3.enable = true;
   };
 
   services.qemuGuest.enable = true;
 
   networking.hostName = "dkc01";
+  networking.networkmanager.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "22.11";

@@ -87,6 +87,10 @@
     };
   };
 
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+  programs.bash.enable = true;
+
   xsession.windowManager.i3 = {
     config = {
       enable = true;

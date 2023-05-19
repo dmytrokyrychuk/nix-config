@@ -84,6 +84,8 @@
       workbench = {
         iconTheme = "vscode-icons";
       };
+
+      editor.lineNumbers = "relative";
     };
   };
 

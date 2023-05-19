@@ -4,8 +4,7 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other home-manager modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
+    outputs.homeManagerModules.i3
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -92,14 +91,6 @@
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.bash.enable = true;
-
-  xsession.windowManager.i3 = {
-    config = {
-      enable = true;
-      startup = [
-      ];
-    };
-  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

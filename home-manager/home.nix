@@ -77,6 +77,12 @@
         version = "12.2.0";
         sha256 = "sha256-PxM+20mkj7DpcdFuExUFN5wldfs7Qmas3CnZpEFeRYs=";
       }
+      {
+        name = "ayu";
+        publisher = "teabyii";
+        version = "1.0.5";
+        sha256 = "sha256-+IFqgWliKr+qjBLmQlzF44XNbN7Br5a119v9WAnZOu4=";
+      }
     ];
     userSettings = {
       nix.enableLanguageServer = true;
@@ -84,6 +90,7 @@
       nix.serverSettings.nil.formatting.command = [ "nixpkgs-fmt" ];
 
       workbench = {
+        colorTheme = "Ayu Light";
         iconTheme = "vscode-icons";
       };
 

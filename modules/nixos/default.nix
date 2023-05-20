@@ -2,6 +2,6 @@
 # These should be stuff you would like to share with others, not your personal configurations.
 
 {
-  # List your module files here
-  # my-module = import ./my-module.nix;
+  gui-i3 = import ./gui-i3.nix;
+  proxmox-vm-gui = import ./proxmox-vm-gui.nix;
 }

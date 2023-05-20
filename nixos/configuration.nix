@@ -4,8 +4,8 @@
 { inputs, outputs, lib, config, pkgs, ... }: {
   # You can import other NixOS modules here
   imports = [
-    # If you want to use modules your own flake exports (from modules/nixos):
-    # outputs.nixosModules.example
+    outputs.nixosModules.gui-i3
+    outputs.nixosModules.proxmox-vm-gui
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
@@ -116,23 +116,6 @@
     # Use keys only. Remove if you want to SSH using password (not recommended)
     passwordAuthentication = false;
   };
-
-  services.compton = {
-    enable = true;
-    settings = {
-      inactive-dim = 0.05;
-    };
-  };
-
-  services.xserver = {
-    enable = true;
-    desktopManager.xterm.enable = false;
-    displayManager.defaultSession = "none+i3";
-    windowManager.i3.enable = true;
-  };
-
-  services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true;
 
   networking.hostName = "dkc01";
   networking.networkmanager.enable = true;

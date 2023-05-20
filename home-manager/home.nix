@@ -101,6 +101,7 @@
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
   programs.bash.enable = true;
+  programs.fzf.enable = true;
 
   programs.ssh = {
     enable = true;

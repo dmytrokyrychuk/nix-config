@@ -102,6 +102,14 @@
   programs.direnv.nix-direnv.enable = true;
   programs.bash.enable = true;
 
+  programs.ssh = {
+    enable = true;
+    serverAliveInterval = 30;
+    extraConfig = ''
+      AddKeysToAgent yes
+    '';
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

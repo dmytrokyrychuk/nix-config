@@ -116,6 +116,10 @@
     # Use keys only. Remove if you want to SSH using password (not recommended)
     passwordAuthentication = false;
   };
+  # Agent might not start at boot at first. Run the following command once, then
+  # the agent will start correctly on subsequent boots:
+  #   systemctl --user start ssh-agent.service
+  programs.ssh.startAgent = true;
 
   networking.hostName = "dkc01";
   networking.networkmanager.enable = true;

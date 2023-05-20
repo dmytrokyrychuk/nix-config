@@ -5,4 +5,5 @@
   i3 = import ./i3.nix;
   kitty = import ./kitty.nix;
   rofi = import ./rofi.nix;
+  fonts = import ./fonts.nix;
 }

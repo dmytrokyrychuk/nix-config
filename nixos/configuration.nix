@@ -64,6 +64,10 @@
     pkgs.nixpkgs-fmt
   ];
 
+  fonts.fonts = [
+    pkgs.nerdfonts
+  ];
+
   environment.variables.EDITOR = "nvim";
 
   # Select internationalisation properties.

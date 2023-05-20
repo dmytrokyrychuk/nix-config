@@ -7,6 +7,7 @@
     outputs.homeManagerModules.i3
     outputs.homeManagerModules.kitty
     outputs.homeManagerModules.rofi
+    outputs.homeManagerModules.fonts
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -102,6 +103,7 @@
   programs.direnv.nix-direnv.enable = true;
   programs.bash.enable = true;
   programs.fzf.enable = true;
+  programs.starship.enable = true;
 
   programs.ssh = {
     enable = true;

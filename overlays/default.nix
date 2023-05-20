@@ -21,4 +21,10 @@
       config.allowUnfree = true;
     };
   };
+
+  # Use unstable kitty-themes. The kitty.theme setting from HomeManager was updated
+  # to find the theme files to be at the new location. 
+  bump-kitty-themes = final: prev: {
+    kitty-themes = prev.unstable.kitty-themes.override { };
+  };
 }

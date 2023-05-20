@@ -5,6 +5,7 @@
   # You can import other home-manager modules here
   imports = [
     outputs.homeManagerModules.i3
+    outputs.homeManagerModules.kitty
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -20,6 +21,7 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       outputs.overlays.unstable-packages
+      outputs.overlays.bump-kitty-themes
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default

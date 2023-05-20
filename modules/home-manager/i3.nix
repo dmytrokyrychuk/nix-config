@@ -19,10 +19,10 @@
           "${mod}+${down}" = "focus down";
 
           # Move
-          "${mod}+shift+${left}" = "focus left";
-          "${mod}+shift+${right}" = "focus right";
-          "${mod}+shift+${up}" = "focus up";
-          "${mod}+shift+${down}" = "focus down";
+          "${mod}+Shift+${left}" = "move left";
+          "${mod}+Shift+${right}" = "move right";
+          "${mod}+Shift+${up}" = "move up";
+          "${mod}+Shift+${down}" = "move down";
         };
     };
   };

@@ -125,6 +125,9 @@
   #   systemctl --user start ssh-agent.service
   programs.ssh.startAgent = true;
 
+  programs.fish.enable = true;
+  users.users.dmytro.shell = pkgs.fish;
+
   networking.hostName = "dkc01";
   networking.networkmanager.enable = true;
 

@@ -105,6 +105,12 @@
   programs.fzf.enable = true;
   programs.starship.enable = true;
 
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      set fish_greeting  # Disable greeting
+    '';
+  };
   programs.ssh = {
     enable = true;
     serverAliveInterval = 30;

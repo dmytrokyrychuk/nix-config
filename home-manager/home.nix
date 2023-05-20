@@ -6,6 +6,7 @@
   imports = [
     outputs.homeManagerModules.i3
     outputs.homeManagerModules.kitty
+    outputs.homeManagerModules.rofi
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default

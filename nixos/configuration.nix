@@ -132,6 +132,7 @@
   };
 
   services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
 
   networking.hostName = "dkc01";
   networking.networkmanager.enable = true;

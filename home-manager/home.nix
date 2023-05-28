@@ -9,6 +9,8 @@
     outputs.homeManagerModules.rofi
     outputs.homeManagerModules.fonts
 
+    inputs.vscode-server.homeModules.default
+
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
@@ -101,6 +103,8 @@
       editor.renderWhitespace = "trailing";
     };
   };
+
+  services.vscode-server.enable = true;
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;

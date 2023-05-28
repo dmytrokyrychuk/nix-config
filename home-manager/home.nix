@@ -61,6 +61,7 @@
   programs.git.enable = true;
   programs.git.userName = "Dmytro Kyrychuk";
   programs.git.userEmail = "dmytro@kyrych.uk";
+  programs.git.extraConfig.init.defaultBranch = "main";
 
   programs.qutebrowser.enable = true;
 

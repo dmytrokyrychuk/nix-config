@@ -104,6 +104,7 @@
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
+  home.sessionVariables.DIRENV_WARN_TIMEOUT = "10s";
   programs.bash.enable = true;
   programs.fzf.enable = true;
   programs.starship.enable = true;

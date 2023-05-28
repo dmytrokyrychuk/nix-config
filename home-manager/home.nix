@@ -98,6 +98,7 @@
       };
 
       editor.lineNumbers = "relative";
+      editor.renderWhitespace = "trailing";
     };
   };
 

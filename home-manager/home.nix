@@ -75,6 +75,8 @@
       vscodevim.vim
       jnoortheen.nix-ide
       oderwat.indent-rainbow
+      arrterian.nix-env-selector
+      ms-python.python
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-icons";

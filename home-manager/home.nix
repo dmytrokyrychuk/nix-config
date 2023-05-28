@@ -72,6 +72,7 @@
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
       jnoortheen.nix-ide
+      oderwat.indent-rainbow
     ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "vscode-icons";

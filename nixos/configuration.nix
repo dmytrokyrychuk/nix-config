@@ -104,7 +104,7 @@
         let
           authorizedKeys = pkgs.fetchurl {
             url = "https://github.com/dmytrokyrychuk.keys";
-            sha256 = "sha256-MW76pxSnJNL81lp7XJlKgwJK6jiWbTVbUEZazD0SkmM=";
+            sha256 = "sha256-3DXwTY3eM8J7ZWm6Rei1T4nMyXurAWNAluBSVxYKTS4=";
           };
         in
         pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);

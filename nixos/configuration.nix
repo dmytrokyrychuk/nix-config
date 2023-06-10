@@ -62,6 +62,7 @@
   environment.systemPackages = [
     pkgs.nil
     pkgs.nixpkgs-fmt
+    pkgs.gparted
   ];
 
   fonts.fonts = [

@@ -4,4 +4,5 @@
 {
   gui-i3 = import ./gui-i3.nix;
   proxmox-vm-gui = import ./proxmox-vm-gui.nix;
+  cka = import ./cka.nix;
 }

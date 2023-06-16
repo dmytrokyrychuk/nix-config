@@ -6,6 +6,7 @@
   imports = [
     outputs.nixosModules.gui-i3
     outputs.nixosModules.proxmox-vm-gui
+    outputs.nixosModules.cka
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
@@ -104,7 +105,7 @@
         let
           authorizedKeys = pkgs.fetchurl {
             url = "https://github.com/dmytrokyrychuk.keys";
-            sha256 = "sha256-3DXwTY3eM8J7ZWm6Rei1T4nMyXurAWNAluBSVxYKTS4=";
+            sha256 = "sha256-D45/lJ76om8VioV7uyCl19JbbArkqXCztyDLNlfW52g=";
           };
         in
         pkgs.lib.splitString "\n" (builtins.readFile authorizedKeys);

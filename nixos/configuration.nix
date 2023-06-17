@@ -7,6 +7,7 @@
     outputs.nixosModules.gui-i3
     outputs.nixosModules.proxmox-vm-gui
     outputs.nixosModules.cka
+    outputs.nixosModules.docker
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd

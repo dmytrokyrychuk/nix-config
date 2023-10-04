@@ -6,9 +6,9 @@
       keybindings =
         let
           mod = "Mod1";
-          up = "i";
-          down = "k";
-          left = "j";
+          left = "h";
+          down = "j";
+          up = "k";
           right = "l";
         in
         lib.mkOptionDefault {

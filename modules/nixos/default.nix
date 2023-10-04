@@ -6,4 +6,5 @@
   proxmox-vm-gui = import ./proxmox-vm-gui.nix;
   cka = import ./cka.nix;
   docker = import ./docker.nix;
+  spice-autorandr = import ./spice-autorandr.nix;
 }

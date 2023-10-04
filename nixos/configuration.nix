@@ -8,6 +8,7 @@
     outputs.nixosModules.proxmox-vm-gui
     outputs.nixosModules.cka
     outputs.nixosModules.docker
+    outputs.nixosModules.spice-autorandr
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd

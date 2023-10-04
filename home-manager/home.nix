@@ -103,6 +103,8 @@
 
       editor.lineNumbers = "relative";
       editor.renderWhitespace = "trailing";
+
+      vsicons.dontShowNewVersionMessage = true;
     };
   };
 

@@ -3,6 +3,9 @@
   xsession.windowManager.i3 = {
     enable = true;
     config = {
+      startup = [
+        { command = "spice-vdagent"; }
+      ];
       keybindings =
         let
           mod = "Mod1";

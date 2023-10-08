@@ -62,10 +62,11 @@
     };
   };
 
-  environment.systemPackages = [
-    pkgs.nil
-    pkgs.nixpkgs-fmt
-    pkgs.gparted
+  environment.systemPackages = with pkgs; [
+    nil
+    nixpkgs-fmt
+    gparted
+    htop
   ];
 
   fonts.fonts = [

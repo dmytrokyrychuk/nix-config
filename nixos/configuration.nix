@@ -100,6 +100,8 @@
   boot.loader.efi.canTouchEfiVariables = false;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
+  zramSwap.enable = true;
+
   users.users = {
     dmytro = {
       initialPassword = "correcthorsebatterystaple";

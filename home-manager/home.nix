@@ -8,6 +8,7 @@
     outputs.homeManagerModules.kitty
     outputs.homeManagerModules.rofi
     outputs.homeManagerModules.fonts
+    outputs.homeManagerModules.firefox
 
     inputs.vscode-server.homeModules.default
 
@@ -64,6 +65,9 @@
   programs.git.userName = "Dmytro Kyrychuk";
   programs.git.userEmail = "dmytro@kyrych.uk";
   programs.git.extraConfig.init.defaultBranch = "main";
+  programs.git.aliases = {
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup";
+  };
 
   programs.qutebrowser.enable = true;
 

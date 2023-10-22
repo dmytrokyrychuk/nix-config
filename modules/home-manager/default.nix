@@ -6,4 +6,5 @@
   kitty = import ./kitty.nix;
   rofi = import ./rofi.nix;
   fonts = import ./fonts.nix;
+  firefox = import ./firefox.nix;
 }

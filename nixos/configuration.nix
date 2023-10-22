@@ -70,7 +70,9 @@
   ];
 
   fonts.fonts = [
-    pkgs.nerdfonts
+    (pkgs.nerdfonts.override {
+      fonts = [ "CodeNewRoman" ];
+    })
   ];
 
   environment.variables.EDITOR = "nvim";

@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 let
-  monoFont = "'DroidSansMono Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
+  monoFont = "'CodeNewRoman Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace";
 in
 {
   programs.vscode.userSettings.editor.fontFamily = monoFont;
